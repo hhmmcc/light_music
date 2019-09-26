@@ -1,0 +1,235 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  /* #box {
+    width: 100%;
+    height: 100%;
+  } */
+  #components-layout-demo-custom-trigger .trigger {
+    font-size: 18px;
+    line-height: 64px;
+    padding: 0 24px;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  #components-layout-demo-custom-trigger .trigger:hover {
+    color: #d1d41a;
+  }
+  
+  #components-layout-demo-custom-trigger .logo1 {
+    height: 60px;
+    width: 100%;
+    background: rgba(240, 80, 80, 1);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .logo1content {
+    width: 80%;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .logo1contentchild {
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .logo1icon{
+      margin-left: 15px;
+      color: #ffffff;
+      font-size: 23px;
+  }
+  .logo1 span{
+      margin-left: 10px;
+      font-size: 20px;
+      color: #ffffff;
+  }
+  #sider {
+    background: #181F24;
+  }
+  .footer {
+    width: 100%;
+    height: 60px;
+    background: #4cb6cb;
+    position: fixed;
+    bottom: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around
+
+  }
+  .footer1{
+    width: 200px;
+    height: 60px;
+    background: red;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .footer1user{
+    font-size: 20px;
+    color: white;
+  }
+  .footer1span{
+    font-size: 18px;
+    margin-left: 10px;
+    color: white;
+  }
+  .footer2{
+    width: 200px;
+    height: 60px;
+    background: red;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+ .footer2icon{
+    font-size: 40px;
+    color: white;
+  }
+  .footer2icon1{
+    font-size: 30px;
+    color: white;
+  }
+  
+  .footer3{
+    width: 800px;
+    height: 60px;
+    background: red;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+  }
+  .footer4{
+    width: 300px;
+    height: 60px;
+    background: red;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .header {
+    display: flex;
+  }
+  .item {
+    width: 400px;
+    height: 50px;
+    line-height: 50px;
+    display: flex;
+  }
+  .button {
+    width: 40px;
+    height: 30px;
+    margin-top: 16px;
+    line-height: 30px;
+    border-bottom-style: none;
+    border-left-style: none;
+    border-top-style: none;
+    border-right-style: none;
+    background: #ffffff;
+  }
+  .tt {
+    width: 200px;
+    height: 30px;
+    border-left-style: none;
+    border-top-style: none;
+    border-right-style: none;
+    border-bottom-style: none;
+    margin-top: 16px;
+    font-size: 12px;
+    color: #b5b7b7;
+  }
+  .content {
+  height: 800px;
+  }
+  .logospan{
+    font-size: 22px;
+    color: red
+  }
+  .logo2{
+    height: 50px;
+    line-height: 50px;
+    margin-left: 10px;
+  }
+ #sider2{
+  height: 100%;
+  background: #181F24;
+  display: flex;
+flex-direction: column;
+justify-content: space-between
+ }
+ #sider2 span {
+color: #EADEDE;
+font-size: 20px;
+ }
+ .menuicon2{
+   margin-left: 50px;
+ }
+ #sider3{
+  background: #181F24;
+  display: flex;
+flex-direction: column;
+justify-content: space-between
+ }
+ #sider3 span {
+  color: #EADEDE;
+  font-size: 18px;
+}
+#find{
+ font-size: 25px;
+  color: rgb(13, 224, 48);
+}
+#bars{
+  font-size: 25px;
+  color: #74C6CC;
+}
+#robot{
+  font-size: 25px;
+  color: rgb(13, 224, 48);
+}
+#user{
+  font-size: 25px;
+  color: rgb(201, 81, 81);
+}
+#profile{
+  font-size: 25px;
+  color: #74C6CC;  
+}
+#usergroup-add{
+  font-size: 25px;
+  color: rgb(201, 81, 81);  
+}
+#folder-open{
+  font-size: 25px;
+  color: #74C6CC;  
+}
+#file-add{
+  font-size: 25px;
+  color: rgb(13, 224, 48);  
+}
+#team{
+  font-size: 25px;
+  color: #74C6CC;  
+}
+#project{
+  font-size: 25px;
+  color: #74C6CC; 
+}
+#euro{
+  font-size: 25px;
+  color: #74C6CC; 
+}
+#allinicon{
+  color: white
+}
