@@ -19,10 +19,8 @@ app.all("*", function(req, res, next) {
   next();
 });
 let IndexControllers = require("./controller/IndexControllers");
-app.get('/main',IndexControllers.index);
+app.get('/style',IndexControllers.index);
 
-let SizeControllers = require("./controller/SizeControllers");
-app.get('/gxg',SizeControllers.index);
 
 app.listen(8081, function(){
     console.log("监听8081端口的服务器已启动");

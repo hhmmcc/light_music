@@ -8,7 +8,7 @@ class SqlBase{
             user: "root", //MySQL认证用户名
             password: "cdhq1234", //MySQL认证用户密码
             port: "10055", //端口号
-            database: "xhwql02" //数据库里面的数据
+            database: "music_data" //数据库里面的数据
             });
             //连接
             this.connection.connect();

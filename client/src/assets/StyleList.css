@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    cursor:url(https://imoongo.com/wp-content/themes/musiks/assets/images/Arrow.png),default;
+}
+.style{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background: #F2F4F8;
+    justify-content: space-between;
+
+  }
+  .rightList{
+    width: 20%;
+  }
+  .rightList ul{
+      width: 100%;
+      height: 100%;
+      background: pink;
+      list-style: none;
+      background: #E0EAEC;
+  }
+  .rightList ul li{
+      width: 100%;
+      height: 40px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      box-sizing: border-box;
+  }
+
+  .list{
+      width: 20%;
+      height: 40px;
+      line-height: 40px;
+      text-align: left;
+      font-size: 14px;
+      color: #545a5f;
+      padding-left: 30px;
+     
+  }
+  .list1{
+    text-align: right;
+    padding-right: 30px;
+  }
+
+  .rightContent{
+    width: 75%;
+    height: auto;
+  }
+  .title{
+      font-size: 30px;
+      font-weight: 100;
+      text-align: left;
+      margin:10px 0px;
+  }
+  .playContentBox{
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      
+  }
+  .playBox{
+      width: 15%;
+      height: 133px;
+      background:  #E0EAEC;
+      position: relative;
+      margin: 10px 10px;
+  }
+  .playBox img{
+    width: 100%;
+    height: 100%;
+  }
+.playControl{
+    width: 100%;
+    height: 100%;
+    background: black;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    opacity: 0.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.audience{
+  width: 100%;
+  text-align: right;
+  color: white;
+  font-size: 8px;
+  height: 20px;
+  line-height: 20px;
+}
+.playButton{
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  color: white;
+  font-size: 24px;
+}
+.playSong{
+  width: 100%;
+  height: 20px;
+  color: white;
+  text-align: center;
+  font-size: 12px;
+}
