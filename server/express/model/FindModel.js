@@ -3,9 +3,9 @@ class FindModel extends SqlBase{
     constructor(){
         super();
     }
-    getData(callback){
+    getAllFind(callback){
         
-        let sql = 'select * from finding';
+        let sql = `select * from finding`;
         this.connection.query(sql,function(err,result){
             if(err){
                 console.log("[select ERROR] - ",err.message);
@@ -15,4 +15,5 @@ class FindModel extends SqlBase{
         });
     }
 }
+
 module.exports = FindModel;

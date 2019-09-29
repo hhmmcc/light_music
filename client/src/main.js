@@ -5,40 +5,50 @@ import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import VueRouter from 'vue-router';
 import App from './App.vue';
-import axios from 'axios'
-import VueAxios from 'vue-axios'
+import axios from 'axios';
+import VueAxios from 'vue-axios';
+import Antd from 'ant-design-vue'
+import "ant-design-vue/dist/antd.css";
 //导入组件，为定义路由做准备
 import Find from './components/Find'
 import Artists from './components/Artists'
-// 引入音频文件
-// import audio from './assets/audio/风之颂.mp3'
-Vue.use(VueRouter)
+import StyleList from "./components/StyleList";
+import Album from "./components/Album";
+import PlayList from "./components/PlayList";
+import Vuex from 'vuex'
+Vue.use(Vuex)
+Vue.config.productionTip = false;
+Vue.use(VueRouter);
 Vue.use(VueAxios, axios);
 Vue.use(ElementUI);
+Vue.use(Antd);
+// 定义状态管理器
 
-// // 添加音频文件点击播放函数（全局方法）
-// Vue.prototype.clickButton = () => {
-//   let buttonAudio = document.getElementById('music');
-//   buttonAudio.setAttribute('src',audio)
-//   buttonAudio.play()
-// }
+const store = new Vuex.Store({
+  state: {
+    count: 0
+  },
+  mutations: {
+    increment (state) {
+      state.count++
+    }
+  }
+});
 
-// document.body.addEventListener('click',function( e ){
-//   let event = e || window.event;
-//   let target = event.target || event.srcElement;
-//   let clickMusic = target.getAttribute('clickMusic')
-//   if(clickMusic==='true') Vue.prototype.clickButton()
-//   else return false;
-// })
-
+//定义路由，参数暂定为路由路径和组件名称
 const routes = [
+  {path:'/style',component:StyleList},
+  {path:'/album',component:Album},
+  {path:'/playlist',component:PlayList},
   {path:'/find',component:Find},
   {path:'/artists',component:Artists}
 ]
+//对路由的实例化
 const router = new VueRouter({
     routes
 })
 new Vue({
+  store,
   router,
   render: h => h(App),
 }).$mount('#app')

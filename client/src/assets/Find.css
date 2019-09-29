@@ -39,7 +39,7 @@
   }
   .strips span{
     position: absolute;
-    width: 15%;
+    width: 20%;
     display: inline-block;
     text-indent: -9999px;
   }
@@ -71,7 +71,7 @@
     }
   }
   .strips .bar2{
-    left: 22%;
+    left: 20%;
     height: 40%;
     background-color: #62bcce;
     animation: movingbar2 1s infinite alternate both;
@@ -177,11 +177,32 @@
       display: flex;
       align-self: auto;
       margin-bottom: 15px;
+      position: relative;
   }
   .find .picture .imgBox img{
       width: 100%;
       height: 150px;
   }
+
+  .picture .imgBox  .opacity{
+    width: 100%;
+    height: 150px;
+    background-color: rgba(0,0,0,.75);
+    position: absolute;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 50;
+  }
+  .imgBox .opacity i{
+    z-index: 100;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+  }
+
 /* 音乐文字 */
   .find .music{
     margin: 20px 0;
@@ -295,9 +316,7 @@
     margin: 10px 0;
   }
   /* 全站TOP */
-  /* .station{
-    background-color: pink;
-  } */
+ 
   .col .sing{
     width: 100%;
     padding-right: 20px;
@@ -314,12 +333,13 @@
   }
   .leftBox img{
     height: 100%;
+    width: 20%;
     margin-right: 10px;
   }
   /* 显示页面 */
   .leftBox .opacity{
     height: 78%;
-    width: 48%;
+    width: 20%;
     background-color: rgba(0,0,0,.75);
     position: absolute;
     margin: 0 auto;
@@ -402,7 +422,7 @@ margin-bottom: 20px;
   color: #333333;
   margin-bottom: 20px;
 }
-.content-box .content{
+.content-box .blog-content{
   font-size: 16px;
   font-weight: 100;
   color: #687073;

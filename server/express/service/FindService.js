@@ -2,10 +2,10 @@ let FindModel = require("../model/FindModel");
 class FindService{
     constructor(){    
     }
-    getAllData(callBack){
+    geFindtDate(callBack){
         let findModel = new FindModel();
-        findModel.getData(function(data){
-            callBack(data);
+        findModel.getAllFind(function(songlist){
+            callBack(songlist);
         });   
     }
 }
