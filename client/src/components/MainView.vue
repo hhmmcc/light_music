@@ -14,7 +14,7 @@
           <span style="font-size:12px;color:#9FA6AA">发现音乐</span>
         </div>
         <a-menu id="sider2" mode="inline" :defaultSelectedKeys="['1']">
-          <a-menu-item key="1" class="menuitem">
+          <a-menu-item key="1" class="menuitem" @click="toFind">
             <a-icon type="bell" id="find" />
             <span>发现</span>
           </a-menu-item>
@@ -23,39 +23,39 @@
               <a-icon type="bars" id="bars" />
               <span>风格</span>
             </span>
-            <a-menu id="sider3">
-              <a-menu-item key="8">
+            <a-menu id="sider3" >
+              <a-menu-item key="8" @click="toQuStyle(0)">
                 <a-icon type="right" id="allinicon" />
                 <span>曲风</span>
               </a-menu-item>
-              <a-menu-item key="9">
+              <a-menu-item key="9" @click="toQuStyle(1)">
                 <a-icon type="right" id="allinicon" />
                 <span>心情</span>
               </a-menu-item>
-              <a-menu-item key="10">
+              <a-menu-item key="10" @click="toQuStyle(2)">
                 <a-icon type="right" id="allinicon" />
                 <span>乐器</span>
               </a-menu-item>
-              <a-menu-item key="11">
+              <a-menu-item key="11" @click="toQuStyle(3)">
                 <a-icon type="right" id="allinicon" />
                 <span>联想</span>
               </a-menu-item>
-              <a-menu-item key="12">
+              <a-menu-item key="12" @click="toQuStyle(4)">
                 <a-icon type="right" id="allinicon" />
                 <span>场景</span>
               </a-menu-item>
             </a-menu>
           </a-sub-menu>
 
-          <a-menu-item key="2">
+          <a-menu-item key="2" @click="toAlbum">
             <a-icon type="robot" id="robot" />
             <span>专辑</span>
           </a-menu-item>
-          <a-menu-item key="3">
+          <a-menu-item key="3" @click="toArtists">
             <a-icon type="user" id="user" />
             <span>艺人</span>
           </a-menu-item>
-          <a-menu-item key="4" class="menuitem">
+          <a-menu-item key="4" class="menuitem" @click="toPlayList">
             <a-icon type="profile" id="profile" />
             <span>歌单</span>
           </a-menu-item>
@@ -183,7 +183,26 @@ export default {
       isshow: false
     };
   },
+  props:{},
+  components:{
+  },
   methods:{
+    toQuStyle(num){
+      this.$store.state.count = num;
+      this.$router.push(`/style`);
+    },
+    toAlbum(){
+      this.$router.push(`/album`);
+    },
+    toPlayList(){
+       this.$router.push(`/playlist`);
+    },
+    toFind(){
+      this.$router.push(`/find`);
+    },
+    toArtists(){
+      this.$router.push(`/artists`);
+    },
     fun1(){
       this.$router.push('/dynamic')
     },

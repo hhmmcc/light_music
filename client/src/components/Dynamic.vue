@@ -76,7 +76,7 @@ export default {
   data() {
     return {
       list: [],
-      isid:1
+      isid:0
     };
   },
   methods:{
@@ -86,7 +86,7 @@ export default {
     }
   },
   mounted(){
-    this.axios.get("http://localhost:8082/dynamic").then(response=>{
+    this.axios.get("http://localhost:8081/dynamic").then(response=>{
       console.log(response.data)
       this.list = response.data
     })

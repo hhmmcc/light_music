@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    cursor:url(https://imoongo.com/wp-content/themes/musiks/assets/images/Arrow.png),default;
+}
+.style{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background: #F2F4F8;
+    justify-content: space-between;
+
+  }
+
+
+  .rightContent{
+    width: 100%;
+    margin: 0px 20px;
+    height: auto;
+  }
+  .title{
+      font-size: 30px;
+      font-weight: 100;
+      text-align: left;
+      margin:10px 0px;
+  }
+  .playContentBox{
+      width: 100%;
+      height: 150px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      
+  }
+  .playBox_1{
+      width: 150px;
+      height: 150px;
+      background:  #E0EAEC;
+      position: relative;
+  }
+  .playBox_1 img{
+    width: 150px;
+    height: 150px;
+  }
+.playControl{
+    width: 100%;
+    height: 100%;
+    background: black;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    opacity: 0.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.audience{
+  width: 100%;
+  text-align: right;
+  color: white;
+  font-size: 8px;
+  height: 20px;
+  line-height: 20px;
+}
+.playButton{
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  color: white;
+  font-size: 24px;
+}
+.playSong{
+  width: 100%;
+  height: 20px;
+  color: white;
+  text-align: center;
+  font-size: 12px;
+}
+.author{
+  width: 150px;
+  height: 30px;
+  background: pink;
+}
+.playBox1{
+  padding: 0;
+  height: 200px;
+  width: 150px;
+  margin: 10px 10px;
+}
+
+.playBoxBottom{
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.headImg{
+  height: 20px;
+  width: 20px;
+  border-radius: 10px;
+}
+.headImg >img{
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+.authorName{
+  margin-left: 10px;
+}

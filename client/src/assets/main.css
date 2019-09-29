@@ -151,8 +151,9 @@
     color: #b5b7b7;
   }
   .content {
-  height: 300px;
   margin-left: 20px;
+  height: 800px;
+  overflow: scroll;
   }
   .logospan{
     font-size: 22px;

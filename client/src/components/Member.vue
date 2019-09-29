@@ -40,7 +40,7 @@ export default {
     }
   },
   mounted () {
-    this.axios.get("http://localhost:8082/member").then(response => {
+    this.axios.get("http://localhost:8081/member").then(response => {
       console.log(response);
       this.list = response.data.member;
       this.number = response.data.number[0].number
