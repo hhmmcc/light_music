@@ -10,6 +10,7 @@ import "ant-design-vue/dist/antd.css";
 import StyleList from "./components/StyleList";
 import Album from "./components/Album";
 import PlayList from "./components/PlayList";
+import Blog from "./components/Blog";
 import Vuex from 'vuex'
 Vue.use(Vuex)
 Vue.config.productionTip = false;
@@ -34,7 +35,8 @@ const store = new Vuex.Store({
 const routes = [
   {path:'/style',component:StyleList},
   {path:'/album',component:Album},
-  {path:'/playlist',component:PlayList}
+  {path:'/playlist',component:PlayList},
+  {path:'/blog',component:Blog}
 ]
 
 //对路由的实例化

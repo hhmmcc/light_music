@@ -83,7 +83,7 @@
               <span>博客</span>
             </span>
             <a-menu id="sider3">
-              <a-menu-item key="13">
+              <a-menu-item key="13"  @click="toBlog">
                 <a-icon type="project" id="project" />
                 <span>记忆</span>
               </a-menu-item>
@@ -139,7 +139,7 @@
         </a-layout-header>
         <a-layout-content
           class="content"
-        > <router-view></router-view>  </a-layout-content>
+        >   <router-view></router-view>  </a-layout-content>
       </a-layout>
     </a-layout>
     <div class="footer">
@@ -172,6 +172,7 @@
 <script>
 import { Layout, Icon } from "ant-design-vue";
 import Vue from "vue";
+import Blog from './Blog';
 Vue.component("a-layout", Layout);
 export default {
   data() {
@@ -182,6 +183,7 @@ export default {
   },
   props:{},
   components:{
+    Blog
   },
   methods:{
     toQuStyle(num){
@@ -193,6 +195,9 @@ export default {
     },
     toPlayList(){
        this.$router.push(`/playlist`);
+    },
+    toBlog(){
+      this.$router.push(`/blog`);
     }
   }
 };

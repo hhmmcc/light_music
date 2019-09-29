@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    cursor:url(https://imoongo.com/wp-content/themes/musiks/assets/images/Arrow.png),default;
+}
+.blog{
+    width: 100%;
+    height: 100%;
+}
+.blog-right{
+    width: 75%;
+    height: 100%;
+    margin-left: 20px;
+}
+.blogBox{
+    width: 100%;
+    height: 800px;
+}
+.blogHead{
+    padding-left: 20px;
+    text-align: left;
+}
+.imgBox{
+    width: 100%;
+    height:596px;
+}
+.imgBox>img{
+    width: 100%;
+    height: 100%;
+}
+.blogContent{
+    width: 100%;
+    height: 200px;
+    background:white;
+    box-sizing: border-box;
+    padding: 35px;
+    text-align: left;
+}

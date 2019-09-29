@@ -23,6 +23,15 @@ app.get('/style',IndexControllers.index);
 
 let StyleListControllers = require("./controller/StyleListControllers");
 app.get('/stylelist',StyleListControllers.index);
+
+let ArtistsControllers = require("./controller/ArtistsControllers");
+app.get('/artists',ArtistsControllers.index);
+
+
+let FindControllers = require("./controller/FindControllers");
+app.get('/find',FindControllers.index);
+
 app.listen(8081, function(){
     console.log("监听8081端口的服务器已启动");
 });
+
