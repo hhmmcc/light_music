@@ -1,11 +1,11 @@
 let SqlBase = require("./SqlBase");
-class SizeModel extends SqlBase{
+class Member extends SqlBase{
     constructor(){
         super();
     }
-    getSize(callback){
+    getMember(callback){
         
-        let sql = `select * from size_table`;
+        let sql = `select * from Member`;
         this.connection.query(sql,function(err,result){
             if(err){
                 console.log("[select ERROR] - ",err.message);
@@ -15,4 +15,4 @@ class SizeModel extends SqlBase{
         });
     }
 }
-module.exports = SizeModel;
+module.exports = Member;

@@ -18,12 +18,13 @@ app.all("*", function(req, res, next) {
   res.header("Content-Type", "application/json;charset=utf-8");
   next();
 });
-let IndexControllers = require("./controller/IndexControllers");
-app.get('/main',IndexControllers.index);
 
-let SizeControllers = require("./controller/SizeControllers");
-app.get('/gxg',SizeControllers.index);
 
-app.listen(8081, function(){
-    console.log("监听8081端口的服务器已启动");
+let MemberControllers = require("./controller/MemberControllers");
+app.get('/member',MemberControllers.index);
+let DynamicControllers = require("./controller/DynamicControllers");
+app.get('/dynamic',DynamicControllers.index);
+
+app.listen(8082, function(){
+    console.log("监听8082端口的服务器已启动");
 });

@@ -1,10 +1,11 @@
 let SqlBase = require("./SqlBase");
-class CommodityModel extends SqlBase{
+class Number extends SqlBase{
     constructor(){
         super();
     }
-    getAllCommodity(callback){
-        let sql = `select * from commodity`;
+    getNumber(callback){
+        
+        let sql = `select * from Number`;
         this.connection.query(sql,function(err,result){
             if(err){
                 console.log("[select ERROR] - ",err.message);
@@ -15,4 +16,4 @@ class CommodityModel extends SqlBase{
     }
 }
 
-module.exports = CommodityModel;
+module.exports = Number;

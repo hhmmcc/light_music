@@ -1,11 +1,11 @@
 let SqlBase = require("./SqlBase");
-class SmallModel extends SqlBase{
+class Dynamic extends SqlBase{
     constructor(){
         super();
     }
-    getAllSmallImag(id,callback){
+    getDynamic(callback){
         
-        let sql = `select * from small_img where commodity_id=${id}`;
+        let sql = `select * from Dynamic`;
         this.connection.query(sql,function(err,result){
             if(err){
                 console.log("[select ERROR] - ",err.message);
@@ -15,5 +15,4 @@ class SmallModel extends SqlBase{
         });
     }
 }
-
-module.exports = SmallModel;
+module.exports = Dynamic;

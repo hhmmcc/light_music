@@ -68,11 +68,11 @@
             <a-menu id="sider3">
               <a-menu-item key="6">
                 <a-icon type="right" id="allinicon" />
-                <span>动态</span>
+                <span @click="fun1">动态</span>
               </a-menu-item>
               <a-menu-item key="7">
                 <a-icon type="right" id="allinicon" />
-                <span>成员</span>
+                <span @click="fun2">成员</span>
               </a-menu-item>
             </a-menu>
           </a-sub-menu>
@@ -138,9 +138,11 @@
           </div>
         </a-layout-header>
         <a-layout-content
-          :style="{ margin: '24px 16px', padding: '24px', background: '#fff', minHeight: '280px' }"
+          :style="{background: '#fff', minHeight: '280px' }"
           class="content"
-        >Content</a-layout-content>
+        >
+        <router-view></router-view>
+        </a-layout-content>
       </a-layout>
     </a-layout>
     <div class="footer">
@@ -180,6 +182,14 @@ export default {
       collapsed: false,
       isshow: false
     };
+  },
+  methods:{
+    fun1(){
+      this.$router.push('/dynamic')
+    },
+    fun2(){
+      this.$router.push('/members')
+    }
   }
 };
 </script>
