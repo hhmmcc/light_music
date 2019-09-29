@@ -17,9 +17,6 @@
         <div class="opacity"  v-show="show==item.id||play==item.id">
               <i :class="[play==item.id ? 'el-icon-video-pause': 'el-icon-video-play']" @click="playMusic(item.id)"></i>
             </div>
-        <!-- <div class="music" v-if="show==index">
-          <!-- <audio src="../assets/audio/风之颂.mp3" id="music"></audio> -->
-        <!-- </div> --> 
       </div>
     </div>
     <!-- 音乐 -->
