@@ -14,7 +14,7 @@
           <span style="font-size:12px;color:#9FA6AA">发现音乐</span>
         </div>
         <a-menu id="sider2" mode="inline" :defaultSelectedKeys="['1']">
-          <a-menu-item key="1" class="menuitem">
+          <a-menu-item key="1" class="menuitem" @click="toFind">
             <a-icon type="bell" id="find" />
             <span>发现</span>
           </a-menu-item>
@@ -51,7 +51,7 @@
             <a-icon type="robot" id="robot" />
             <span>专辑</span>
           </a-menu-item>
-          <a-menu-item key="3">
+          <a-menu-item key="3" @click="toArtists">
             <a-icon type="user" id="user" />
             <span>艺人</span>
           </a-menu-item>
@@ -68,11 +68,11 @@
             <a-menu id="sider3">
               <a-menu-item key="6">
                 <a-icon type="right" id="allinicon" />
-                <span>动态</span>
+                <span @click="fun1">动态</span>
               </a-menu-item>
               <a-menu-item key="7">
                 <a-icon type="right" id="allinicon" />
-                <span>成员</span>
+                <span @click="fun2">成员</span>
               </a-menu-item>
             </a-menu>
           </a-sub-menu>
@@ -138,7 +138,9 @@
           </div>
         </a-layout-header>
         <a-layout-content
+          :style="{background: '#fff', minHeight: '280px' }"
           class="content"
+
         >   <router-view></router-view>  </a-layout-content>
       </a-layout>
     </a-layout>
@@ -196,10 +198,24 @@ export default {
     toPlayList(){
        this.$router.push(`/playlist`);
     },
+
     toBlog(){
       this.$router.push(`/blog`);
+    },
+   toFind(){
+      this.$router.push(`/find`);
+    },
+    toArtists(){
+      this.$router.push(`/artists`);
+    },
+    fun1(){
+      this.$router.push('/dynamic')
+    },
+    fun2(){
+      this.$router.push('/members')
     }
   }
+  
 };
 </script>
 <style scoped>

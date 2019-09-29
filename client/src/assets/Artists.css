@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* cursor: pointer; */
+    cursor: url(https://imoongo.com/wp-content/themes/musiks/assets/images/Arrow.png),default;
+  }
+#artists{
+ padding: 35px;
+ display: flex;
+ flex-direction: row;
+ flex-wrap: wrap;
+ /* justify-content: space-between; */
+ align-items: center;
+ background-color: #F2F4F8;    
+}
+#artists .title{
+  width: 100%;
+  font-size: 32px;
+  font-weight: 100;
+  color: #333333;
+  margin-bottom: 20px;
+}
+#artists .artists-item{
+  width: 8%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 20px 20px 0;
+}
+.artists-item img{
+  width: 80%;
+  height: 70px;
+  margin-bottom: 20px;
+}
+

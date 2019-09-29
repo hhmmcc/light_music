@@ -1,0 +1,467 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* cursor: pointer; */
+    /* cursor: url(https://imoongo.com/wp-content/themes/musiks/assets/images/Arrow.png),default; */
+  }
+  .find{
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #F2F4F8;
+  }
+  /* 标题 */
+  .find .title{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .title span{
+    height: 24px;
+    margin: 12px 0;
+    text-align: center;
+    line-height: 24px;
+    font-weight: 100;
+    font-size: 18px;
+    margin-top: 10px;
+    color: inherit;
+  }
+
+  .title .strips{
+    width: 20px;
+    height: 20px;
+    /* background-color: pink; */
+    margin-left: 10px;
+    position: relative;
+  }
+  .strips span{
+    position: absolute;
+    width: 20%;
+    display: inline-block;
+    text-indent: -9999px;
+  }
+  .strips .public{
+    bottom: -12px;
+    border: 1px solid #F2F4F8;
+  }
+  .strips .bar1{
+    left: 0;
+    height: 60%;
+    background-color: #797fb4;
+    animation: movingbar1 1s infinite alternate both;
+  }
+  @keyframes movingbar1{
+    0%{
+      height:32%;
+    }
+    25%{
+      height: 80%;
+    }
+    50%{
+      height:56%;
+    }
+    75%{
+      height: 100%;
+    }
+    100%{
+      height: 23%;
+    }
+  }
+  .strips .bar2{
+    left: 20%;
+    height: 40%;
+    background-color: #62bcce;
+    animation: movingbar2 1s infinite alternate both;
+  }
+@keyframes movingbar2{
+  0%{
+    height:34%;
+  }
+  25%{
+    height: 56%;
+  }
+  50%{
+    height:33%;
+  }
+  75%{
+    height: 85%;
+  }
+  100%{
+    height: 90%;
+  }
+}
+.strips .bar3{
+  left: 42%;
+  height: 56%;
+  background-color: #fcd417;
+  animation: movingbar3 1s infinite alternate both;
+}
+@keyframes movingbar3{
+0%{
+  height:22%;
+}
+25%{
+  height: 70%;
+}
+50%{
+  height:90%;
+}
+75%{
+  height: 60%;
+}
+100%{
+  height: 80%;
+}
+}
+.strips .bar4{
+  left: 62%;
+  height: 40%;
+  background-color: pink;
+  animation: movingbar4 1s infinite alternate both;
+}
+@keyframes movingbar4{
+0%{
+  height:45%;
+}
+25%{
+  height: 100%;
+}
+50%{
+  height:80%;
+}
+75%{
+  height: 56%;
+}
+100%{
+  height: 66%;
+}
+}
+.strips .bar5{
+  left: 82%;
+  height: 36%;
+  background-color: blueviolet;
+  animation: movingbar5 1s infinite alternate both;
+}
+@keyframes movingbar5{
+0%{
+  height:100%;
+}
+25%{
+  height: 76%;
+}
+50%{
+  height:94%;
+}
+75%{
+  height: 56%;
+}
+100%{
+  height: 33%;
+}
+}
+
+  /* 图片 */
+  .find .picture{
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+  }
+  .find .picture .imgBox{
+      width: 15%;
+      height: 150px;
+      display: flex;
+      align-self: auto;
+      margin-bottom: 15px;
+      position: relative;
+  }
+  .find .picture .imgBox img{
+      width: 100%;
+      height: 150px;
+  }
+
+  .picture .imgBox  .opacity{
+    width: 100%;
+    height: 150px;
+    background-color: rgba(0,0,0,.75);
+    position: absolute;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 50;
+  }
+  .imgBox .opacity i{
+    z-index: 100;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+  }
+
+/* 音乐文字 */
+  .find .music{
+    margin: 20px 0;
+    color: #333333;
+    font-size: 30px;
+    font-weight: 100;
+  }
+/* 登录板块 */
+  .find .login{
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* background-color: white; */
+  }
+  .login .w48{
+    width: 48%;
+    padding: 10px;
+  }
+  .login .w48 .login-top{
+    font-size: 18px;
+    color: #333333;
+    font-weight: 100;
+  }
+  .login .icon{
+    margin-right:20px; 
+  }
+  .login .left{
+    background-color: white;
+  }
+  .login .left span{
+    font-size: 14px;
+    color: #B2B8B9;
+    font-weight: 100;
+  }
+  .login .right{
+    background-color: #2EA0B6;
+  }
+  .login .right span{
+    font-size: 14px;
+    color:#BEE3EB;
+    font-weight: 100;
+  }
+  .login .right .login-top{
+    color: white;
+  }
+  /* 热门艺术家   猜你喜欢   全站TOP */
+  .total{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  .total .col{
+    width: 32%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* background-color: pink; */
+  }
+  .total .col .artist{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 10px;
+  }
+  .total .col .h3{
+    font-size: 18px;
+    color: #333333;
+    font-weight: 100;
+    margin-top: 10px;
+  }
+  .col span{
+    font-size: 14px;
+    color: #B2B8B9;
+    font-weight: 100;
+    margin: 5px 0;
+  }
+  .col .person{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left:10px ;
+    margin-bottom: 10px;
+  } 
+  .person img{
+    width: 12%;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+  /* 猜你喜欢 */
+  .col .like-imgs{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .like-imgs .like-img-box{
+    width:47%;
+  }
+  .like-img-box img{
+    width: 100%;
+    height: 170px;
+    margin: 10px 0;
+  }
+  /* 全站TOP */
+ 
+  .col .sing{
+    width: 100%;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .col .sing .leftBox{
+    height: 60px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+  }
+  .leftBox img{
+    height: 100%;
+    width: 20%;
+    margin-right: 10px;
+  }
+  /* 显示页面 */
+  .leftBox .opacity{
+    height: 78%;
+    width: 20%;
+    background-color: rgba(0,0,0,.75);
+    position: absolute;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 50;
+  }
+  .leftBox .opacity i{
+    z-index: 100;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+  }
+.leftBox .sing-name{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.sing-name .song-name{
+  font-size: 16px;
+  color: #777281;
+}
+.sing-name .singer-name{
+  font-size: 14px;
+  color: #B2B6BA;
+}
+.sing .sing-icon{
+  width:10%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 20px;
+}
+/* 最新专辑 */
+.album{
+width: 100%;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 20px;
+}
+.album .title{
+  width: 100%;
+  margin-bottom: 20px;
+  color: #333333;
+  font-size: 18px;
+  font-weight: 100;
+}
+.album .img-box{
+  width: 24%;
+}
+.album .img-box img{
+  width: 100%;
+  height: 260px;
+}
+/* 最新博客+评论 */
+.bottom-content{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.bottom-content .content-box{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.bottom-content .content-box .title{
+  font-size: 18px;
+  font-weight: 100;
+  color: #333333;
+  margin-bottom: 20px;
+}
+.content-box .blog-content{
+  font-size: 16px;
+  font-weight: 100;
+  color: #687073;
+  margin-bottom: 14px;
+}
+.bottom{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.bottom .title{
+  font-size: 18px;
+  font-weight: 100;
+  color: #333333;
+  margin:10px 0;
+}
+.bottom .content-box{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: white;
+}
+.content-box .text{
+  font-size: 16px;
+  font-weight: 100;
+  color: #687073;
+  margin:40px 20px;
+  /* margin-bottom: 20px; */
+}
+.bottom .address{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+
+

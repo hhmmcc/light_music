@@ -18,6 +18,13 @@ app.all("*", function(req, res, next) {
   res.header("Content-Type", "application/json;charset=utf-8");
   next();
 });
+
+
+let MemberControllers = require("./controller/MemberControllers");
+app.get('/member',MemberControllers.index);
+let DynamicControllers = require("./controller/DynamicControllers");
+app.get('/dynamic',DynamicControllers.index);
+
 let IndexControllers = require("./controller/IndexControllers");
 app.get('/style',IndexControllers.index);
 
