@@ -17,10 +17,11 @@
   .rightList ul{
       width: 100%;
       height: 100%;
-      background: pink;
       list-style: none;
       background: #E0EAEC;
+  
   }
+  
   .rightList ul li{
       width: 100%;
       height: 40px;
@@ -30,9 +31,12 @@
       align-items: center;
       box-sizing: border-box;
   }
+  .rightList ul li:hover{
+    background: #F2F4F8;
+  }
 
   .list{
-      width: 20%;
+      width: 50%;
       height: 40px;
       line-height: 40px;
       text-align: left;

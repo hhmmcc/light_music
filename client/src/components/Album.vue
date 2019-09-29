@@ -6,32 +6,17 @@
         <div  class="playContentBox"> 
           <div
            v-for="(item,index) in playList" :key="item.id"
+           v-show="index>5 && index<20"
            class="playBox" 
             @mouseover="show(index)" 
             v-on:mouseout="show1(index)"><img :src="item.img" alt="播放相应的图片" >
-          <div v-show="playIndex == index"  class="playControl">
+          <div v-show="playIndex == index || isPlay==index"  class="playControl">
             <div class="audience"><i class="el-icon-headset"></i><span style="margin:0px 6px" title="播放次数">{{item.audience}}</span></div>
             <div class="playButton"><i @click="play(index,item.audio)" :class="isPlay==index?'el-icon-video-pause':'el-icon-video-play'"></i></div>
             <div class="playSong">{{item.name}}</div>
           </div>
           </div> 
         </div>
-
-        <!-- 多余的 -->
-            <div  class="playContentBox"> 
-          <div
-           v-for="(item,index) in playList" :key="item.id"
-           class="playBox" 
-            @mouseover="show(index)" 
-            v-on:mouseout="show1(index)"><img :src="item.img" alt="播放相应的图片" >
-          <div v-show="playIndex == index"  class="playControl">
-            <div class="audience"><i class="el-icon-headset"></i><span style="margin:0px 6px" title="播放次数">{{item.audience}}</span></div>
-            <div class="playButton"><i @click="play(index,item.audio)" :class="isPlay==index?'el-icon-video-pause':'el-icon-video-play'"></i></div>
-            <div class="playSong">{{item.name}}</div>
-          </div>
-          </div> 
-        </div>
-        <!--  -->
 
       </div>
     <!-- 音频文件 -->
@@ -48,7 +33,7 @@
             @mouseover="isShow(index)"
             @mouseout="isShow1(index)">
             <img :src="item.img" alt="青石桥畔图片">
-            <div v-show="show2==index" class="leftPlayBox"><i @click="playLike(index)" :class="isChange==index?'el-icon-video-pause':'el-icon-video-play'"></i></div>
+            <div v-show="show2==index || isChange==index" class="leftPlayBox"><i @click="playLike(index)" :class="isChange==index?'el-icon-video-pause':'el-icon-video-play'"></i></div>
             </div>
             <div class="leftListTitle">
                 <div class="leftListTitleLfet"><p style="margin-bottom:10px">青石桥畔</p><p>冯硕</p></div>
@@ -84,15 +69,13 @@ export default {
       {img:"https://imoongo.com/wp-content/uploads/edd/2019/02/青石桥畔-150x150.jpg"},
       {img:"https://imoongo.com/wp-content/uploads/edd/2019/02/青石桥畔-150x150.jpg"},
       {img:"https://imoongo.com/wp-content/uploads/edd/2019/02/青石桥畔-150x150.jpg"},
-      {img:"https://imoongo.com/wp-content/uploads/edd/2019/02/青石桥畔-150x150.jpg"},
-      {img:"https://imoongo.com/wp-content/uploads/edd/2019/02/青石桥畔-150x150.jpg"},
       {img:"https://imoongo.com/wp-content/uploads/edd/2019/02/青石桥畔-150x150.jpg"},]
     }
   },
   mounted(){
-    Vue.axios.get('http://localhost:8081/style').then((response) => {
-      this.styleList = response.data[0].songStyle;
-      this.playList = this.styleList[0].styleList;
+    Vue.axios.get('http://localhost:8081/stylelist').then((response) => {
+      this.styleList = response.data;
+      this.playList = this.styleList;
     });
   },
   methods:{

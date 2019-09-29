@@ -3,8 +3,14 @@ class StyleListModel extends SqlBase{
     constructor(){
         super();
     }
-    getStyleList(id, callback){
-        let sql = `select * from style_list where songstyle_id=${id}`;
+    getStyleList(callback,id,num){
+        let sql;
+        if(num==1){
+             sql = `select * from style_list where songstyle_id=${id}`;
+        }else{
+             sql = `select * from style_list`;
+        }
+        
         this.connection.query(sql,function(err,result){
             if(err){
                 console.log("[select ERROR] - ",err.message);

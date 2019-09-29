@@ -21,7 +21,8 @@ app.all("*", function(req, res, next) {
 let IndexControllers = require("./controller/IndexControllers");
 app.get('/style',IndexControllers.index);
 
-
+let StyleListControllers = require("./controller/StyleListControllers");
+app.get('/stylelist',StyleListControllers.index);
 app.listen(8081, function(){
     console.log("监听8081端口的服务器已启动");
 });

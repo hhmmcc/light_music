@@ -17,7 +17,7 @@ class GetTopicContent{
                         let length2 = songStyle.length;
                         for(let j = 0; j<length2; j++){
                             let id2 = songStyle[j].id;
-                            styleListModel.getStyleList(id2, function(styleList){
+                            styleListModel.getStyleList(function(styleList){
                                 songStyle[j].styleList = styleList;
                                 if(j==length2-1){
                                     style[i].songStyle = songStyle;
@@ -25,7 +25,7 @@ class GetTopicContent{
                                         callBack(style);
                                     }
                                 }
-                            });
+                            }, id2,1);
                         }
                     });
                 }

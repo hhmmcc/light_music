@@ -3,7 +3,9 @@
 
       <div class="rightList">
         <ul >
-          <li v-for="(item,index) in styleList" :key="index" @click="changeStyle(index)">
+          <li v-for="(item,index) in styleList[this.$store.state.count].songStyle" 
+          :key="index"  
+          @click="changeStyle(index)">
             <div class="list">{{item.style_name}}</div> <div class="list list1">{{item.num}}</div> 
           </li>
         </ul>
@@ -14,11 +16,11 @@
         <!-- @mouseout="show1" -->
         <div  class="playContentBox"> 
           <div
-           v-for="(item,index) in playList" :key="item.id"
+           v-for="(item,index) in styleList[this.$store.state.count].songStyle[listIndex].styleList" :key="item.id"
            class="playBox" 
             @mouseover="show(index)" 
             v-on:mouseout="show1(index)"><img :src="item.img" alt="播放相应的图片" >
-          <div v-show="playIndex == index"  class="playControl">
+          <div v-show="playIndex == index || isPlay==index"  class="playControl">
             <div class="audience"><i class="el-icon-headset"></i><span style="margin:0px 6px" title="播放次数">{{item.audience}}</span></div>
             <div class="playButton"><i @click="play(index)" :class="isPlay==index?'el-icon-video-pause':'el-icon-video-play'"></i></div>
             <div class="playSong">{{item.name}}</div>
@@ -40,6 +42,7 @@ import Vue from "vue";
 export default {
   name: 'StyleList',
   props: {
+    indexSrc:Number,
     msg: String
   },
   data(){
@@ -50,15 +53,18 @@ export default {
       listIndex:0,
       styleList:[],
       playList:[],
-      title:"聆听曲风轻音乐、纯音乐"
+      title:"聆听风格轻音乐、纯音乐",
     }
   },
   mounted(){
+    
     Vue.axios.get('http://localhost:8081/style').then((response) => {
-      this.styleList = response.data[0].songStyle;
-      this.playList = this.styleList[this.listIndex].styleList;
-      window.console.log(this.playList);
+      
+      this.styleList = response.data;
+      window.console.log(this.styleList);
     });
+  },
+  watch:{
   },
   methods:{
     play(index){
@@ -76,8 +82,7 @@ export default {
     },
     show1(index){
       if(this.isPlay==index){
-        this.playIndex = index;
-        
+        this.playIndex = index;      
       }
       if(this.isPlay!=index){
          this.playIndex = null;
@@ -85,8 +90,8 @@ export default {
     },
     changeStyle(index){
       this.listIndex = index;
-      this.playList = this.styleList[this.listIndex].styleList;
-      this.title = this.styleList[this.listIndex].styleList[0].title;
+      this.title =`聆听${this.styleList[this.$store.state.count].songStyle[this.listIndex].style_name}轻音乐、纯音乐`;
+      window.console.log(this.title);
     }
   }
 }

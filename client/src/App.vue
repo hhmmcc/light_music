@@ -1,18 +1,15 @@
 <template>
   <div id="app">
- <Album></Album>
+<MainView></MainView>
   </div>
 </template>
 
 <script>
-
-// import StyleList from './components/StyleList';
-import Album from './components/Album';
+import MainView from './components/MainView'
 export default {
   name: 'app',
   components:{
-    // 'StyleList':StyleList,
-    'Album':Album
+    'MainView':MainView
   }
 }
 </script>
@@ -23,7 +20,8 @@ body{
   height: 100%;
   background: #F2F4F8;
 }
-#app {
+
+ #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -32,4 +30,6 @@ body{
   width: 100%;
   height: auto;
 }
+
+
 </style>
